@@ -1,0 +1,22 @@
+{
+  "name": "yum-yield",
+  "version": "1.0.0",
+  "description": "food ordering application",
+  "scripts": {
+    "start": "npx parcel index.html",
+    "build": "npx parcel build index.html",
+    "test": "jest"
+  },
+  "author": "Prashanth Reddy Kadire",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserlist":[
+    "last 2 versions"
+  ]
+}
