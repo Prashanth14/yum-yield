@@ -20,19 +20,21 @@
 
 
 #App Layout
-i. Header
-    -logo
-    -nav-items
-ii.Body
-    -RestaurantContainer
-    -RestaurantCard
-        -image
-        -Name of Restaurant
-        -star rating
-        -cuisine
-        -deliverty time
-iii.
-    -copyright
-    -Links
-    -Address
-    -contact
+/**
+* i. Header
+*     -logo
+*     -nav-items
+* ii.Body
+*     -RestaurantContainer
+*     -RestaurantCard
+*         -image
+*         -Name of Restaurant
+*         -star rating
+*         -cuisine
+*         -deliverty time
+* iii.
+*     -copyright
+*     -Links
+*     -Address
+*     -contact
+*/
