@@ -10,13 +10,14 @@
   "author": "Prashanth Reddy Kadire",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.10.3"
+    "parcel": "^2.10.3",
+    "util": "^0.12.5"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "browserlist":[
+  "browserlist": [
     "last 2 versions"
   ]
 }
