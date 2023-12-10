@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 const Body = () => {
-    //Local State Variable - super power varaibale(scope is inside componenet)
+    //Local State Variable - super power varaibale(scope is inside componenet)(Hook)
     let [listOfRestaurants, setListOfRestaurants] = useState(resList);
 
     return(
