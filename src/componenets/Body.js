@@ -1,4 +1,5 @@
 import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
 
 
@@ -17,9 +18,16 @@ const Body = () => {
 
         const json = await data.json();
         console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+
         //use optional chaining
         setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
+
+    //conditional rendering
+    if(listOfRestaurants.length === 0){
+        return <Shimmer/>
+    }
+
 
     return(
         <div className="body">
