@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client"
 import Header from "./componenets/Header";
 import Body from "./componenets/Body";
+import About from "./componenets/About";
+import { BrowserRouter, RouterProvider, createBrowserRouter
+ } from "react-router-dom";
  
 const AppLayout = () => {
     return(
@@ -12,9 +15,20 @@ const AppLayout = () => {
     );
 };
 
+const appRouter = createBrowserRouter([
+    {
+        path: "/",
+        element: <AppLayout />
+    },
+    {
+        path: "/about",
+        element: <About />
+    }
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter}/>);
 
 
 
