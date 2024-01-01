@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client"
 import Header from "./componenets/Header";
 import Body from "./componenets/Body";
 import About from "./componenets/About";
+import Contact from "./componenets/Contact";
 import { BrowserRouter, RouterProvider, createBrowserRouter
  } from "react-router-dom";
  
@@ -23,6 +24,10 @@ const appRouter = createBrowserRouter([
     {
         path: "/about",
         element: <About />
+    },
+    {
+        path: "/contact",
+        element: <Contact />
     }
 ]);
 
