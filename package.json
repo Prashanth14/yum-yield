@@ -10,7 +10,10 @@
   "author": "Prashanth Reddy Kadire",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
     "parcel": "^2.10.3",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
     "util": "^0.12.5"
   },
   "dependencies": {
@@ -18,7 +21,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1"
   },
-  "browserlist": [
+  "browserslist": [
     "last 2 versions"
   ]
 }
