@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withDealLabel} from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -11,7 +11,10 @@ const Body = () => {
     const [filteredRestaurant, setFilteredRestaurant] = useState([]); 
     const [searchText, setSearchText] = useState("");
 
-    console.log(listOfRestaurants);
+    // console.log(listOfRestaurants);
+
+    //Higher order component
+    const RestaurantCardDeal = withDealLabel(RestaurantCard);
 
     useEffect(()=>{
        fetchData();
@@ -19,14 +22,14 @@ const Body = () => {
 
     const fetchData = async () =>{
         const data = await fetch(
-            "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.385044&lng=78.486671&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING" 
+            "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING" 
         );
 
         const json = await data.json();
     //    console.log(json);
         //use optional chaining
-        setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
 
     const onlineStatus = useOnlineStatus();
@@ -69,7 +72,9 @@ const Body = () => {
             {filteredRestaurant.map((restaurant) =>{
                 return (
                 <Link key ={restaurant?.info?.id} to={"/restaurants/"+restaurant?.info?.id}>
-                    <RestaurantCard  resData={restaurant} />
+                    
+                    {restaurant?.info?.aggregatedDiscountInfoV3?.header? <RestaurantCardDeal resData={restaurant}/>: <RestaurantCard  resData={restaurant} />}
+                    
                 </Link>
                 )
             })}
