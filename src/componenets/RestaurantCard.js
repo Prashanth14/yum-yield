@@ -26,7 +26,7 @@ export const withDealLabel = (RestaurantCard) =>{
     return (props) => {
         return(
             <div>
-                <label className="absolute rounded-lg p-1 m-1 bg-orange-500 flex justify-center items-center">{props.resData?.info?.aggregatedDiscountInfoV3?.header + " "+ props.resData?.info?.aggregatedDiscountInfoV3?.subHeader}</label>
+                <label className="absolute rounded-lg p-1 m-1 bg-orange-300 flex justify-center items-center">{props.resData?.info?.aggregatedDiscountInfoV3?.header + " "+ props.resData?.info?.aggregatedDiscountInfoV3?.subHeader}</label>
                 <RestaurantCard {...props}/>
             </div>
         );
