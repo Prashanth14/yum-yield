@@ -4,6 +4,7 @@ import Header from "./componenets/Header";
 import Body from "./componenets/Body";
 import About from "./componenets/About";
 import Contact from "./componenets/Contact";
+import Cart from "./componenets/Cart";
 import Error from "./componenets/Error";
 import Shimmer from "./componenets/Shimmer";
 // import Grocery from "./componenets/Grocery";
@@ -66,7 +67,11 @@ const appRouter = createBrowserRouter([
             {
                 path: "/grocery",
                 element: <Suspense fallback={<h1>Loading...!</h1>}><Grocery /></Suspense>,
-            }
+            },
+            {
+                path: "/cart",
+                element: <Cart />,
+            },
         ],
         errorElement: <Error />
     },
