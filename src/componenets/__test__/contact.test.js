@@ -25,3 +25,12 @@ test("should load Input name in contact Us component", () => {
     //Assertion
     expect(button).toBeInTheDocument();
 });
+
+test("should load 2 Input names in contact Us component", () => {
+    render(<Contact />);
+
+    const inputBoxes = screen.getAllByRole("textbox");
+
+    //Assertion
+    expect(inputBoxes.length).toBe(2);
+});

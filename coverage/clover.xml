@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1704659008660" clover="3.2.0">
-  <project timestamp="1704659008660" name="All files">
+<coverage generated="1704659564233" clover="3.2.0">
+  <project timestamp="1704659564233" name="All files">
     <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="6" coveredelements="6" complexity="0" loc="4" ncloc="4" packages="1" files="2" classes="2"/>
     <file name="Contact.js" path="/Users/prashanthreddykadire/Documents/yum-yield/src/componenets/Contact.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
-      <line num="2" count="3" type="stmt"/>
+      <line num="2" count="4" type="stmt"/>
     </file>
     <file name="sum.js" path="/Users/prashanthreddykadire/Documents/yum-yield/src/componenets/sum.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
