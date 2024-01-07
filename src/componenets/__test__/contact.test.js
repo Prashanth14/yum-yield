@@ -9,3 +9,11 @@ test("should load contact Us componenet", () => {
     //Assertion
     expect(heading).toBeInTheDocument();
 });
+
+test("should load button in contact Us componenet", () => {
+    render(<Contact />);
+
+    const button = screen.getByRole("button");
+    //Assertion
+    expect(button).toBeInTheDocument();
+});
